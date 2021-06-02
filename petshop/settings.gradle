@@ -1,0 +1,7 @@
+include(':animal')
+include(':kennel')
+
+
+project(":animal").projectDir = file('../animal')
+project(":kennel").projectDir = file('../kennel')
+

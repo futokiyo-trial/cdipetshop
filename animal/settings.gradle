@@ -1,0 +1,7 @@
+include(':majalis-commonutils')
+include(':majalis-core')
+include(':majalis-cbl')
+
+project(":majalis-commonutils").projectDir = file('../../majalis-commonutils')
+project(":majalis-core").projectDir = file('../../majalis/majalis-core')
+project(":majalis-cbl").projectDir = file('../../majalis/majalis-cbl')

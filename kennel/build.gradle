@@ -1,0 +1,45 @@
+
+
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'idea'
+
+def projectName = 'kennel'
+archivesBaseName = projectName
+
+group = 'io.yoshizaki4439'
+version = '0.1.0'
+project.ext {
+    artifactId = 'kennel'
+}
+
+def defaultEncoding = 'MS932'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+def animal_version = '0.1.0'
+def javaee_api_version = '7.0'
+
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    api project(':animal')
+    compileOnly "javax:javaee-api:$javaee_api_version"
+    
+}
+
+description = 'Kennel(JEE CDI)'
+
+compileJava {
+    options.encoding = defaultEncoding
+}
+compileTestJava {
+    options.encoding = defaultEncoding
+}

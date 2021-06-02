@@ -1,0 +1,10 @@
+rootProject.name = 'cdipetshop'
+include(':animal')
+include(':kennel')
+include(':petshop')
+
+
+project(":animal").projectDir = file('animal')
+project(":kennel").projectDir = file('kennel')
+project(":petshop").projectDir = file('petshop')
+
